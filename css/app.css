@@ -4,7 +4,6 @@
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    overflow-x: hidden;
 
 }
 
@@ -274,6 +273,8 @@ a:visited {
     border-radius: 4px;
     height: 40px;
     padding: 0 16px;
+    background-image: -webkit-linear-gradient(60deg, #7474BF, #348AC7);
+    background-image: -o-linear-gradient(60deg, #7474BF, #348AC7);
     background-image: linear-gradient(30deg, #7474BF, #348AC7);
 }
 
@@ -458,6 +459,7 @@ footer h2 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-item-align: center;
     align-self: center;
     width: 568px;
     text-align: center;
@@ -517,11 +519,21 @@ address {
 }
 
 .fullScreen {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .fullScreen img {
@@ -533,12 +545,18 @@ address {
     width: 90%;
     padding: 48px;
     position: absolute;
+    -webkit-box-shadow: none;
     box-shadow: none;
     background-color: rgba(255, 255, 255, 0.8);
 }
 
 .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
 }
@@ -653,6 +671,7 @@ img {
 .grid {
     margin-top: 64px;
     width: 90%;
+    -ms-flex-item-align: center;
     align-self: center;
 }
 
@@ -670,13 +689,18 @@ img {
 }
 
 .carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
 
 .carousel picture {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 90%;
     flex: 0 0 90%;
     padding-left: 5%;
 }
@@ -695,8 +719,15 @@ img {
 }
 
 .memberships {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background: #F1F0F6;
     background-image: url(/assets/confetti.svg);
@@ -708,16 +739,29 @@ img {
     width: 80%;
     background: #fff;
     padding: 32px 16px;
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, .1);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, .1);
     margin-top: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -730,7 +774,12 @@ img {
 }
 
 .package {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 8px;
 }
@@ -842,7 +891,12 @@ hr {
 ----------------------------------------------------- */
 
 .programs-specs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background: #f5f5f5;
     padding-bottom: 120px;
@@ -857,12 +911,18 @@ hr {
 /* Tabs container */
 
 .tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0px 16px;
     border-style: none;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 288px;
+    -ms-flex-item-align: center;
     align-self: center;
     position: absolute;
     top: 256px;
@@ -924,6 +984,8 @@ hr {
 
 @media (min-width: 0px) {
     .panel {
+        -webkit-box-ordinal-group: 100;
+        -ms-flex-order: 99;
         order: 99;
     }
 }
@@ -935,6 +997,8 @@ hr {
 }
 
 .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 288px;
 }
@@ -1124,17 +1188,25 @@ hr {
     }
 
     .picture-link {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
     .link {
+        -ms-flex-item-align: end;
         align-self: flex-end;
         /*        margin-right: 16px;*/
         margin-top: 8px;
     }
 
     .listColumns {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -1155,7 +1227,11 @@ hr {
     .card:nth-child(1) {
         height: 440px;
         width: 736px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -1171,13 +1247,23 @@ hr {
     .card:nth-child(3) {
         width: 352px;
         height: 440px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
     .cards {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
     }
 
@@ -1250,6 +1336,7 @@ hr {
     }
 
     .cards {
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     }
 
